@@ -1,14 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!---------------------------------------------------- Meta tags ----------------------------------------------->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap')
+        }
 
-    
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        #page1 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        #left {
+            width: 60%;
+            background-color: #F7F7F7;
+            border-bottom-right-radius: 100px;
+
+        }
+
+        #right {
+            width: 40%;
+            position: relative;
+        }
+
+        #right>nav {
+            height: 10%;
+            display: flex;
+            align-items: center;
+        }
+        #right>nav>ul {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+            margin-left: 5px;
+        }
+        #right>nav>ul>li {
+            font-size: 1.5rem;
+        }
+        #right>#img {
+            height: 70%;
+            width: 50%;
+            background-color: #fff;
+            left: -15%;
+            position: relative;
+            border-bottom-right-radius: 100px;
+            top: 10%;
+            padding: 10px;
+        }
+        #right>div>img {
+            background-size: cover;
+            border-bottom-right-radius: 100px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #left>header {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #left>header>h1 {
+            font-size: 2rem;
+        }
+        #left_box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box {
+            width: 70%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 2rem;
+        }
+
+        #heading>h1 {
+            font-size: 5rem;
+        }
+
+        #CTA {
+            display: flex;
+            gap: 20px;
+        }
+
+        #CTA>button {
+            padding: 20px;
+            border-bottom-right-radius: 15px;
+            font-size: 1.2rem;
+        }
+
+        #CTA>button:nth-child(1) {
+            background-color: #FDAD2A;
+            border: none;
+        }
+
+        #CTA>button:nth-child(2) {
+            border: 2px solid #FDAD2A;
+            background-color: white;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <section id="main">
+        <div id="page1">
+            <aside id="left">
+                <header>
+                    <h1>krupal</h1>
+                    <span> </span>
+                </header>
+                <div id="left_box">
+                    <div id="box">
+                        <div id="heading">
+                            <h1>I'm Krupal Patel</h1>
+                        </div>
+                        <div id="para">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto deleniti voluptatum
+                                aliquid ullam ipsam atque!</p>
+                        </div>
+                        <div id="CTA">
+                            <button>My Portfolio!</button>
+                            <button>Download cv</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <aside id="right">
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Contact us</li>
+                        <li>Sign in</li>
+                    </ul>
+                </nav>
+                <div id="img">
+                    <img src="/WhatsApp Image 2024-02-12 at 12.41.51_5b89d903.jpg" alt="" srcset="">
+                </div>
+            </aside>
+        </div>
+    </section>
 </body>
+
 </html>
