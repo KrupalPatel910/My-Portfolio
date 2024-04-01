@@ -22,6 +22,51 @@
             font-style: normal;
         }
 
+        #navbar {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 30px ;
+            position: fixed;
+            z-index: 99;
+           
+        }
+        .logo {
+            background-color: #ffffff;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        #nav_left {
+            display: flex;
+            flex: 0 0 61%;
+            justify-content: space-around;
+                /* justify-content: center;
+                align-items: center; */
+
+        }
+
+        #nav_left > a{
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-size: 2rem;
+        }
+
+        #nav_right{
+            flex: 0 0 39%;
+        }
+        #nav_right > ul {
+            display: flex;
+            gap: 4vw;
+        }
+
+
+        #nav_right > ul > li{
+            list-style: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
         #page1 {
             width: 100%;
             height: 100vh;
@@ -40,20 +85,6 @@
             position: relative;
         }
 
-        #right>nav {
-            height: 10%;
-            display: flex;
-            align-items: center;
-        }
-        #right>nav>ul {
-            list-style: none;
-            display: flex;
-            gap: 2vw;
-            margin-left: 5px;
-        }
-        #right>nav>ul>li {
-            font-size: 1.5rem;
-        }
         #right>#img {
             height: 70%;
             width: 50%;
@@ -64,6 +95,7 @@
             top: 10%;
             padding: 10px;
         }
+
         #right>div>img {
             background-size: cover;
             border-bottom-right-radius: 100px;
@@ -71,15 +103,7 @@
             height: 100%;
             object-fit: cover;
         }
-        #left>header {
-            height: 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-        #left>header>h1 {
-            font-size: 2rem;
-        }
+
         #left_box {
             width: 100%;
             height: 100%;
@@ -99,6 +123,7 @@
 
         #heading>h1 {
             font-size: 5rem;
+
         }
 
         #CTA {
@@ -121,17 +146,38 @@
             border: 2px solid #FDAD2A;
             background-color: white;
         }
+
+        #page2 {
+            width: 100%;
+            height: 100vh;
+            background-color: #FDAD2A;
+        }
     </style>
 </head>
 
 <body>
     <section id="main">
+        <nav id="navbar">
+            <div id="nav_left">
+                <a href="">
+                    <span>Krupal</span>
+                </a>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="nav_right">
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Projects</li>
+                </ul>
+            </div>
+        </nav>
+
         <div id="page1">
             <aside id="left">
-                <header>
-                    <h1>krupal</h1>
-                    <span> </span>
-                </header>
+              
                 <div id="left_box">
                     <div id="box">
                         <div id="heading">
@@ -149,20 +195,16 @@
                 </div>
             </aside>
             <aside id="right">
-                <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact us</li>
-                        <li>Sign in</li>
-                    </ul>
-                </nav>
+            
                 <div id="img">
                     <img src="/WhatsApp Image 2024-02-12 at 12.41.51_5b89d903.jpg" alt="" srcset="">
                 </div>
             </aside>
         </div>
+        <div id="page2"></div>
     </section>
 </body>
+<script src="/main.js"></script>
+
 
 </html>
