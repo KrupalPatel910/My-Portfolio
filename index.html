@@ -21,47 +21,51 @@
             font-weight: 300;
             font-style: normal;
         }
-
+        
+         /* navbar */
         #navbar {
             width: 100%;
             height: 10vh;
             display: flex;
             justify-content: space-between;
-            padding: 25px 30px ;
+            padding: 25px 30px;
             position: fixed;
             z-index: 99;
-           
         }
+
+        /* for js toggle */
         .logo {
             background-color: #ffffff;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all ease 0.3s;
         }
+
         #nav_left {
             display: flex;
-            flex: 0 0 61%;
+            flex: 0 0 60%;
             justify-content: space-around;
-                /* justify-content: center;
-                align-items: center; */
-
         }
 
-        #nav_left > a{
+        #nav_left>a {
             list-style: none;
             text-decoration: none;
             color: black;
             font-size: 2rem;
+            font-weight: bold;
         }
 
-        #nav_right{
+        #nav_right {
             flex: 0 0 39%;
+
         }
-        #nav_right > ul {
+
+        #nav_right>ul {
             display: flex;
             gap: 4vw;
         }
 
 
-        #nav_right > ul > li{
+        #nav_right>ul>li {
             list-style: none;
             font-size: 20px;
             cursor: pointer;
@@ -73,35 +77,41 @@
             display: flex;
         }
 
-        #left {
-            width: 60%;
-            background-color: #F7F7F7;
-            border-bottom-right-radius: 100px;
-
-        }
-
+        
+        
+        /* Right part of home page */
         #right {
             width: 40%;
-            position: relative;
+            height: 100%;
+            display: flex;
+            gap: 50px;
         }
-
+        
+        /* profile photo */
         #right>#img {
             height: 70%;
-            width: 50%;
+            width: 60%;
             background-color: #fff;
             left: -15%;
             position: relative;
             border-bottom-right-radius: 100px;
-            top: 10%;
+            top: 18%;
             padding: 10px;
         }
-
+        
         #right>div>img {
             background-size: cover;
             border-bottom-right-radius: 100px;
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        
+        /* Left side of home PAge */
+        #left {
+            width: 60%;
+            background-color: #F7F7F7;
+            border-bottom-right-radius: 100px;
         }
 
         #left_box {
@@ -114,18 +124,19 @@
 
         #box {
             width: 70%;
-            height: 50%;
+            height: 70%;
             display: flex;
             flex-direction: column;
             align-items: start;
-            gap: 2rem;
+            justify-content: center;
+            gap: 3rem;
         }
 
         #heading>h1 {
             font-size: 5rem;
-
         }
 
+         /* Call to action button */
         #CTA {
             display: flex;
             gap: 20px;
@@ -152,16 +163,48 @@
             height: 100vh;
             background-color: #FDAD2A;
         }
+
+         /* Follow me  */
+        .main_connection {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .connection {
+            width: 100%;
+            height: 40%;
+            /* background-color: #FDAD2A; */
+            gap: 5px    ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .connection > div > a > img {
+            width: 100%;
+            aspect-ratio: 10/2;
+            object-fit: contain;
+        }
+
     </style>
 </head>
 
 <body>
     <section id="main">
+        <!-- Navbar  -->
         <nav id="navbar">
             <div id="nav_left">
+                <span></span>
+
                 <a href="">
-                    <span>Krupal</span>
+                    <span>Krupal.</span>
                 </a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -175,9 +218,9 @@
             </div>
         </nav>
 
-        <div id="page1">
+        <!-- Home Page  -->
+        <main id="page1">
             <aside id="left">
-              
                 <div id="left_box">
                     <div id="box">
                         <div id="heading">
@@ -185,7 +228,8 @@
                         </div>
                         <div id="para">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto deleniti voluptatum
-                                aliquid ullam ipsam atque!</p>
+                                aliquid ullam ipsam atque! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Voluptates, nam!</p>
                         </div>
                         <div id="CTA">
                             <button>My Portfolio!</button>
@@ -195,15 +239,34 @@
                 </div>
             </aside>
             <aside id="right">
-            
                 <div id="img">
-                    <img src="/WhatsApp Image 2024-02-12 at 12.41.51_5b89d903.jpg" alt="" srcset="">
+                    <img src="/img/WhatsApp Image 2024-02-12 at 12.41.51_5b89d903.jpg" alt="" srcset="">
+                </div>
+                <div class="main_connection">
+                    <div class="connection">
+                        <div>
+                          <a href="https://www.linkedin.com/in/krupal-patel-421b33265/" target="_blank">  <img src="/img/icons8-linkedin.svg" alt="" srcset=""></a>
+                        </div>
+                        <div>
+                        <a href="https://github.com/KrupalPatel910" target="_blank"> <img src="/img/icons8-git.svg" alt="" srcset=""></a>
+                        </div>
+                        <div>
+                         <a href="https://www.instagram.com/krupu__910/" target="_blank"> <img src="/img/icons8-insta.svg" alt="" srcset=""></a>
+                        </div>
+                        <div>
+                          <a href="/index.html"><img src="/img/icons8-twitter.svg" alt="" srcset=""></a>
+                        </div>
+                        <div id="">
+                            <b>Follow me</b>
+                        </div>
+                    </div>
                 </div>
             </aside>
-        </div>
+        </main>
         <div id="page2"></div>
     </section>
 </body>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 <script src="/main.js"></script>
 
 
