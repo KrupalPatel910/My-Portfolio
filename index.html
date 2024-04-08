@@ -21,8 +21,8 @@
             font-weight: 300;
             font-style: normal;
         }
-        
-         /* navbar */
+
+        /* navbar */
         #navbar {
             width: 100%;
             height: 10vh;
@@ -75,10 +75,11 @@
             width: 100%;
             height: 100vh;
             display: flex;
+            flex-wrap: wrap;
         }
 
-        
-        
+
+
         /* Right part of home page */
         #right {
             width: 40%;
@@ -86,7 +87,7 @@
             display: flex;
             gap: 50px;
         }
-        
+
         /* profile photo */
         #right>#img {
             height: 70%;
@@ -98,7 +99,7 @@
             top: 18%;
             padding: 10px;
         }
-        
+
         #right>div>img {
             background-size: cover;
             border-bottom-right-radius: 100px;
@@ -106,7 +107,7 @@
             height: 100%;
             object-fit: cover;
         }
-        
+
         /* Left side of home PAge */
         #left {
             width: 60%;
@@ -136,7 +137,7 @@
             font-size: 5rem;
         }
 
-         /* Call to action button */
+        /* Call to action button */
         #CTA {
             display: flex;
             gap: 20px;
@@ -164,29 +165,113 @@
             background-color: #FDAD2A;
         }
 
-         /* Follow me  */
+        /* Follow me  */
         .main_connection {
             width: 20%;
             height: 100%;
             display: flex;
             align-items: center;
         }
+
         .connection {
             width: 100%;
             height: 40%;
             /* background-color: #FDAD2A; */
-            gap: 5px    ;
+            gap: 5px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .connection > div > a > img {
+
+        .connection>div>a>img {
             width: 100%;
             aspect-ratio: 10/2;
             object-fit: contain;
         }
 
+        .checkBtn {
+            font-size: 40px;
+            color: black;
+            display: none;
+            margin-right: 20px;
+            margin-top: 0px;
+        }
+
+        #check {
+            display: none;
+        }
+
+        /*----------------------------------------------------------- Responsive ----------------------------------- */
+        @media screen and (max-width: 768px) {
+            #nav_right {
+                display: none;
+            }
+
+            #nav_left>a {
+                font-size: 1.5rem;
+            }
+
+            #heading>h1 {
+                font-size: 3rem;
+            }
+            .checkBtn {
+                display: block;
+                margin-top: 0px;
+            }
+            .checkBtn>i {
+                position: absolute;
+                margin-top: -18px;
+            }
+            #nav_right > ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: bisque;
+                text-align: center;
+                left: -100%;
+                top: 80px;
+                transition: all 0.1s;
+
+            }
+            #nav_right > ul > li {
+                display: block;
+                font-size: 35px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+            .main_connection{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            #nav_right {
+                display: none;
+            }
+
+            #nav_left>a {
+                font-size: 1rem;
+            }
+
+            #heading>h1 {
+                font-size: 2rem;
+            }
+
+            .checkBtn {
+                display: block;
+            }
+
+            .checkBtn>i {
+                position: absolute;
+                margin-top: -18px;
+            }
+            .main_connection{
+                display: none;
+            }
+        }
     </style>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
@@ -216,6 +301,11 @@
                     <li>Projects</li>
                 </ul>
             </div>
+            <!--------------------------------------------- Added new Things------------------------------ -->
+            <input type="checkbox" id="check">
+            <label for="check" class="checkBtn">
+                <i class="fas fa-bars">&#xf039;</i>
+            </label>
         </nav>
 
         <!-- Home Page  -->
@@ -245,23 +335,29 @@
                 <div class="main_connection">
                     <div class="connection">
                         <div>
-                          <a href="https://www.linkedin.com/in/krupal-patel-421b33265/" target="_blank">  <img src="/img/icons8-linkedin.svg" alt="" srcset=""></a>
+                            <a href="https://www.linkedin.com/in/krupal-patel-421b33265/" target="_blank"> <img
+                                    src="/img/icons8-linkedin.svg" alt="" srcset=""></a>
                         </div>
                         <div>
-                        <a href="https://github.com/KrupalPatel910" target="_blank"> <img src="/img/icons8-git.svg" alt="" srcset=""></a>
+                            <a href="https://github.com/KrupalPatel910" target="_blank"> <img src="/img/icons8-git.svg"
+                                    alt="" srcset=""></a>
                         </div>
                         <div>
-                         <a href="https://www.instagram.com/krupu__910/" target="_blank"> <img src="/img/icons8-insta.svg" alt="" srcset=""></a>
+                            <a href="https://www.instagram.com/krupu__910/" target="_blank"> <img
+                                    src="/img/icons8-insta.svg" alt="" srcset=""></a>
                         </div>
                         <div>
-                          <a href="/index.html"><img src="/img/icons8-twitter.svg" alt="" srcset=""></a>
+                            <a href="/index.html"><img src="/img/icons8-twitter.svg" alt="" srcset=""></a>
                         </div>
                         <div id="">
                             <b>Follow me</b>
                         </div>
                     </div>
                 </div>
+
+
             </aside>
+
         </main>
         <div id="page2"></div>
     </section>
